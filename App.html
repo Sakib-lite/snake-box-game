@@ -4,13 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Snake Game</title>
-        <link rel="stylesheet" href="game.css" type="text/css">
+        <title>Snake Box Game</title>
+        <link rel="stylesheet" href="css/app.css" type="text/css">
 
     </head>
     <body>
+        <div class="final-scoreboard" id="final-scoreboard">
+            <h1 id="final-score"></h1>
+        </div>
 
-        <div class="grid-container">
+
+        <div class="gameboard" id="gameboard">
 
             <!-- 1th -->
             <div class="white" id="1"></div>
@@ -161,7 +165,13 @@
             <div class="white" id="121"></div>
 
         </div>
+        <div class="" style="margin-top: 20px;">
 
-        <script src="script.js"></script>
+            <span id="scoreboard-text"> Your current score is </span> <span
+                id="scoreboard">0</span>
+
+        </div>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
