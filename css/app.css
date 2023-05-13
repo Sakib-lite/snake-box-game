@@ -23,7 +23,7 @@ body {
   height: 30px;
   width: 30px;
   border:1px solid transparent 
-}
+} 
 
 .current {
   background-color: rgb(228, 37, 37);

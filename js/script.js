@@ -4,7 +4,7 @@ let nextBlock = +current.id;
 let score = 0;
 const visitedNodes = {};
 visitedNodes[current.id] = true;
-
+ 
 const moveBlockSound = new Audio(
   "https://www.fesliyanstudios.com/play-mp3/387"
 );
