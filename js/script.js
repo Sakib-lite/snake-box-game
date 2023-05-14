@@ -4,7 +4,7 @@ let nextBlock = +current.id;
 let score = 0;
 const visitedNodes = {};
 visitedNodes[current.id] = true;
- 
+
 const moveBlockSound = new Audio(
   "https://www.fesliyanstudios.com/play-mp3/387"
 );
@@ -71,29 +71,77 @@ const moveBlock = () => {
 // event listeners
 document.addEventListener("keydown", (e) => {
   if (e.code === "ArrowUp") {
-    if (nextBlock >= 1 && nextBlock <= 11) nextBlock += 110;
-    else nextBlock -= 11;
+    if (
+      +nextBlock !== 1 &&
+      +nextBlock !== 2 &&
+      +nextBlock !== 3 &&
+      +nextBlock !== 4 &&
+      +nextBlock !== 5 &&
+      +nextBlock !== 6 &&
+      nextBlock !== 7 &&
+      +nextBlock !== 8 &&
+      +nextBlock !== 9 &&
+      +nextBlock !== 10 &&
+      +nextBlock !== 11
+    )
+      nextBlock -= 11;
 
     moveBlock();
   }
 
   if (e.code === "ArrowDown") {
-    if (+nextBlock < 111) nextBlock += 11;
-    else nextBlock -= 110;
+    if (
+      +nextBlock !== 111 &&
+      +nextBlock !== 112 &&
+      +nextBlock !== 113 &&
+      +nextBlock !== 114 &&
+      +nextBlock !== 115 &&
+      +nextBlock !== 116 &&
+      nextBlock !== 117 &&
+      +nextBlock !== 118 &&
+      +nextBlock !== 119 &&
+      +nextBlock !== 120 &&
+      +nextBlock !== 121
+    )
+      nextBlock += 11;
 
     moveBlock();
   }
 
   if (e.code === "ArrowRight") {
-    if (+nextBlock === 121) nextBlock = 1;
-    else nextBlock++;
+    if (
+      +nextBlock !== 11 &&
+      +nextBlock !== 22 &&
+      +nextBlock !== 33 &&
+      +nextBlock !== 44 &&
+      +nextBlock !== 55 &&
+      +nextBlock !== 66 &&
+      nextBlock !== 77 &&
+      +nextBlock !== 88 &&
+      +nextBlock !== 99 &&
+      +nextBlock !== 110 &&
+      +nextBlock !== 121
+    )
+      nextBlock++;
 
     moveBlock();
   }
 
   if (e.code === "ArrowLeft") {
-    if (+nextBlock === 1) nextBlock = 121;
-    else nextBlock--;
+    if (
+      +nextBlock !== 1 &&
+      +nextBlock !== 12 &&
+      +nextBlock !== 23 &&
+      +nextBlock !== 34 &&
+      +nextBlock !== 45 &&
+      +nextBlock !== 56 &&
+      nextBlock !== 67 &&
+      +nextBlock !== 78 &&
+      +nextBlock !== 89 &&
+      +nextBlock !== 100 &&
+      +nextBlock !== 111
+    )
+      nextBlock--;
 
     moveBlock();
   }
